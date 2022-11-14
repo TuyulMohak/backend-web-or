@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int      @id @default(autoincrement())
+  email    String   @unique
+  username String   @unique
+  password String
+  role     String   @default("PESERTA")
+  Profile  Profile?
+}
+
+model Profile {
+  id     Int  @id @default(autoincrement())
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId Int  @unique
+
+  nama   String
+  nim    Int
+  divisi String
+  // subdivisi String
+  // fakultas  String
+  // jurusan   String
+
+  // tempatLahir  String
+  // tanggalLahir DateTime
+  // jenisKelamin String
+  // alamatPadang String
+  // alamatAsal   String
+
+  // noHp            Int
+  // agama           String
+  // citaCita        String
+  // riwayatPenyakit String
+  // merkLaptop      String
+  // processor       String
+  // ram             String
+  // vga             String
+
+  // krs              Bytes
+  // buktiPembayaran  Bytes
+  // validationStatus Boolean @default(false)
+}

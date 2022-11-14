@@ -1,0 +1,74 @@
+####
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "jk@mail.com",
+    "username": "jokoo",
+    "password": "kamunanya"
+}
+
+####
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "jk@mail.com",
+    "password": "kamunanya"
+}
+
+###
+
+
+
+GET http://localhost:3000/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzYsImVtYWlsIjoiamtAbWFpbC5jb20iLCJ1c2VybmFtZSI6Impva29vIiwicGFzc3dvcmQiOiIkMmIkMTAkUUM2bjdHU2tTcU8wM2tNbDRXdi5aT2hVVDFVLlhoNDRJcGo0TmVGY3JqcWNYWnRNZmlFcEMiLCJyb2xlIjoicGVzZXJ0YSIsImlhdCI6MTY2ODQzMTI4NCwiZXhwIjoxNjY4NDM0ODg0fQ.0OcePw9plcE6kl8ORE_fNmbOCntTkdKsla19MCsfpzU
+
+###
+
+POST http://localhost:3000/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzYsImVtYWlsIjoiamtAbWFpbC5jb20iLCJ1c2VybmFtZSI6Impva29vIiwicGFzc3dvcmQiOiIkMmIkMTAkUUM2bjdHU2tTcU8wM2tNbDRXdi5aT2hVVDFVLlhoNDRJcGo0TmVGY3JqcWNYWnRNZmlFcEMiLCJyb2xlIjoicGVzZXJ0YSIsImlhdCI6MTY2ODQzMjIzNywiZXhwIjoxNjY4NDM1ODM3fQ.hfA68RFrkH8Ka8bVrbkhbzuW9dq2vYKhCte1riZoPjM
+
+{
+    "nama": "new",     
+    "nim": 123, 
+    "divisi": "programming"
+}
+
+
+####
+
+PUT http://localhost:3000/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzYsImVtYWlsIjoiamtAbWFpbC5jb20iLCJ1c2VybmFtZSI6Impva29vIiwicGFzc3dvcmQiOiIkMmIkMTAkUUM2bjdHU2tTcU8wM2tNbDRXdi5aT2hVVDFVLlhoNDRJcGo0TmVGY3JqcWNYWnRNZmlFcEMiLCJyb2xlIjoicGVzZXJ0YSIsImlhdCI6MTY2ODQzMjIzNywiZXhwIjoxNjY4NDM1ODM3fQ.hfA68RFrkH8Ka8bVrbkhbzuW9dq2vYKhCte1riZoPjM
+
+{
+    "nama": "newnew",     
+    "nim": 321, 
+    "divisi": "mmd"
+}
+
+
+###
+
+
+
+GET http://localhost:3000/users
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsInVzZXJuYW1lIjoic3VwZXJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJHd6SS5HQVhLaEJ0Y1R3MFVhb216dS5HYUNvaXE5UGxPcy5JaVRDYTEvMkk4cXJkdi4xQUZDIiwicm9sZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE2Njc3MTM4MDAsImV4cCI6MTY2NzcxNzQwMH0.SCirAqUePBqu5MJFKFtLuN3rlWDi0Vw7me6FAzRAS1Q
+
+
+###
+
+POST http://localhost:3000/users/validate
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsInVzZXJuYW1lIjoic3VwZXJhZG1pbiIsInBhc3N3b3JkIjoiJDJiJDEwJHd6SS5HQVhLaEJ0Y1R3MFVhb216dS5HYUNvaXE5UGxPcy5JaVRDYTEvMkk4cXJkdi4xQUZDIiwicm9sZSI6InN1cGVyYWRtaW4iLCJpYXQiOjE2Njc2NjcwNzV9.A12VQA9olsVxgD95U-wTNZHSfmzglVu2YhAHWTfdutQ
+
+{
+    "userId": 66
+}
+###
